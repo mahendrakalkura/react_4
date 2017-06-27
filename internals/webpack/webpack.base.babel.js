@@ -62,6 +62,8 @@ module.exports = (options) => ({
   },
   plugins: options.plugins.concat([
     new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
       // make fetch available
       fetch: 'exports-loader?self.fetch!whatwg-fetch',
     }),
